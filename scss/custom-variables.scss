@@ -1,0 +1,26 @@
+$primary: #B46D70;
+$secondary: #888888;
+$dark: #222222;
+$info: #2D2D2D;
+
+$navbar-brand-padding-y: 1rem;
+$navbar-padding-y: 1rem;
+$navbar-padding-x: 1rem;
+$navbar-brand-font-size: 1.5rem;
+$navbar-nav-link-padding-x: 0rem;
+
+$navbar-transparent-brand-color: #ffffff;
+$navbar-transparent-brand-hover-color: #ffffff;
+$navbar-transparent-color: #ffffff;
+$navbar-transparent-toggler-color: #ffffff;
+$navbar-transparent-hover-color: $primary;
+$navbar-transparent-disabled-color: #ffffff;
+$navbar-transparent-active-color: $primary;
+$navbar-transparent-toggler-border-color: #ffffff;
+$navbar-transparent-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-transparent-toggler-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+
+$icon-size: 120px;
+
+$carousel-control-color: black;
+$carousel-indicator-active-bg: black;
+$carousel-caption-color: black;

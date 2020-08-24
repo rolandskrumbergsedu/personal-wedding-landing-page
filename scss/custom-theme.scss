@@ -1,0 +1,237 @@
+@import 'custom-variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import 'fonts';
+@import 'custom-styles';
+@import 'utilities';
+
+body {
+  font-family: MontserratRegular;
+}
+
+.navbar-transparent {
+
+  @include transition(padding-top, padding-bottom, background-color);
+
+  .navbar-brand {
+    color: $navbar-transparent-brand-color;
+
+    @include hover-focus() {
+      color: $navbar-transparent-brand-hover-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-transparent-color;
+
+      font-family: MontserratMedium;
+
+      margin-left: 2rem;
+      margin-right: 2rem;
+      padding-bottom: 1.5rem;
+
+      text-transform: uppercase;
+      font-size: 0.8rem;
+
+      @include transition(padding-bottom);
+
+      @include hover-focus() {
+        font-family: MontserratRegular;
+        color: $navbar-transparent-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-transparent-disabled-color;
+      }
+
+      &:after {
+        display: block;
+        content: attr(title);
+        font-family: MontserratMedium;
+        height: 1px;
+        color: transparent;
+        overflow: hidden;
+        visibility: hidden;
+      }
+    }
+  }
+
+  .show>.nav-link,
+  .active>.nav-link,
+  .nav-link.show,
+  .nav-link.active {
+    color: $navbar-transparent-active-color;
+    border-bottom: $primary 3px solid;
+  }
+}
+
+.navbar-transparent-dark {
+
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  @include transition(padding-top, padding-bottom, background-color);
+
+  .navbar-brand {
+    color: $navbar-transparent-brand-color;
+
+    @include hover-focus() {
+      color: $navbar-transparent-brand-hover-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-transparent-color;
+
+      font-family: MontserratMedium;
+
+      margin-left: 2rem;
+      margin-right: 2rem;
+      padding-bottom: 0;
+
+      font-size: 0.8rem;
+      text-transform: uppercase;
+
+      @include transition(padding-bottom);
+
+      @include hover-focus() {
+        font-family: MontserratRegular;
+        color: $navbar-transparent-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-transparent-disabled-color;
+      }
+    }
+
+    .show>.nav-link,
+    .active>.nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-transparent-active-color;
+      border-bottom: $primary 3px solid;
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-transparent-color;
+    border-color: $navbar-transparent-toggler-border-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: escape-svg($navbar-transparent-toggler-icon-bg);
+  }
+
+  .navbar-text {
+    color: $navbar-transparent-color;
+
+    a {
+      color: $navbar-transparent-active-color;
+
+      @include hover-focus() {
+        color: $navbar-transparent-active-color;
+      }
+    }
+  }
+
+  .navbar-brand__img {
+    display: inline-block;
+
+    img {
+      height: 45px;
+
+      @include transition(height);
+
+    }
+  }
+
+  .navbar-brand__text {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
+  .navbar-brand__text--first {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: -5px;
+
+    @include transition(font-size);
+
+  }
+
+  .navbar-brand__text--second {
+    display: block;
+    font-size: 1.2rem;
+
+    @include transition(font-size);
+  }
+}
+
+.navbar-toggler {
+  color: $navbar-transparent-color;
+  border-color: $navbar-transparent-toggler-border-color;
+}
+
+.navbar-toggler-icon {
+  background-image: escape-svg($navbar-transparent-toggler-icon-bg);
+}
+
+.navbar-text {
+  color: $navbar-transparent-color;
+
+  a {
+    color: $navbar-transparent-active-color;
+
+    @include hover-focus() {
+      color: $navbar-transparent-active-color;
+    }
+  }
+}
+
+h1,
+.h1,
+h1 a,
+.h1 a {
+  line-height: 77px;
+  letter-spacing: 1px;
+  font-style: normal;
+  color: #1f1f1f;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+h4,
+.h4,
+h4 a,
+.h4 a {
+  line-height: 26px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-style: normal;
+  color: #1f1f1f;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+h6,
+.h6,
+h6 a,
+.h6 a {
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-style: normal;
+  color: #888888;
+  font-size: 14px;
+}
+
+.main-headline {
+  font-family: Lieselotte;
+  font-size: 160px;
+  line-height: 160px;
+}
+
+.wave {
+  color: $primary;
+}
