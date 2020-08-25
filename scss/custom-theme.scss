@@ -1,8 +1,16 @@
 @import 'custom-variables';
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import 'fonts';
-@import 'custom-styles';
 @import 'utilities';
+
+$image-dimension: 400px;
+$image-dimension-small: 200px;
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
 
 body {
   font-family: MontserratRegular;
@@ -190,6 +198,10 @@ body {
   }
 }
 
+.our-story-link {
+  width: 29px;
+}
+
 h1,
 .h1,
 h1 a,
@@ -228,10 +240,495 @@ h6 a,
 
 .main-headline {
   font-family: Lieselotte;
-  font-size: 160px;
-  line-height: 160px;
+  font-size: 70px;
+  line-height: 70px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 160px;
+    line-height: 160px;
+  }
+
 }
 
 .wave {
   color: $primary;
+}
+
+#main-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/img/forest.jpg') center center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#main-section-container {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  img {
+    width: $image-dimension-small;
+    height: $image-dimension-small;
+
+    @include media-breakpoint-up(md) {
+      width: $image-dimension;
+      height: $image-dimension;
+    }
+  }
+
+  h1,
+  h3 {
+    color: white;
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: -30px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: -60px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 28px;
+    }
+  }
+
+}
+
+.fa-heart {
+  color: $primary;
+}
+
+
+
+#story-section {
+  padding: 10px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include media-breakpoint-up(md) {
+    padding: 50px;
+  }
+
+  h1 {
+    color: black;
+    padding-bottom: 30px;
+  }
+
+}
+
+#story-section-container {
+  width: 95%;
+  text-align: center;
+}
+
+#happiness-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/img/mountains.jpg') center center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  p {
+    color: white;
+  }
+
+}
+
+#happiness-section-container {
+  width: 80%;
+
+  @include media-breakpoint-up(md) {
+    width: 100%;
+  }
+}
+
+#wedding-details-section {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  h1 {
+    padding-bottom: 30px;
+    font-size: 28px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 48px;
+    }
+  }
+
+}
+
+#wedding-details-section-container {
+  width: 100%;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding-bottom: 20px;
+
+  h4 {
+    margin-top: 20px;
+  }
+
+  &:hover {
+
+    .wedding-detail-image {
+
+      &:after {
+        border-color: $primary;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .wedding-detail-image {
+
+    display: inline-block;
+    position: relative;
+
+    img {
+      height: 180px;
+      width: 180px;
+      object-fit: cover;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      transition: all 300ms linear 0ms;
+    }
+  }
+
+}
+
+#love-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/img/mountains2.jpg') center center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  #love-section-container {
+    width: 70%;
+  }
+
+  p {
+    color: white;
+    font-size: 16px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+    }
+  }
+
+  footer {
+    font-size: 14px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 16px;
+    }
+  }
+
+}
+
+#information-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  h1 {
+    padding-bottom: 45px;
+    font-size: 28px;
+    line-height: 48px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 48px;
+      line-height: 76px;
+    }
+  }
+
+  .row {
+    grid-row-gap: 50px;
+  }
+
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-column-gap: 30px;
+
+  h4 {
+    font-family: MontserratBold;
+  }
+
+  p {
+    color: $secondary;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    font-family: MontserratLight;
+  }
+
+  .icon-box {
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $secondary;
+    transition: all 300ms linear 0ms;
+
+    &:hover {
+      color: white;
+      background-color: $primary;
+    }
+  }
+}
+
+.story-image-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(26, 150px);
+  grid-gap: 15px;
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(14, 150px);
+  }
+}
+
+.story-image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item--1 {
+
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  @include media-breakpoint-up(md) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+
+.item--2 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 5;
+
+  @include media-breakpoint-up(md) {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }
+}
+
+.item--3 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 7;
+
+  @include media-breakpoint-up(md) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 7;
+  }
+}
+
+.item--4 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 5;
+  grid-row-end: 9;
+
+  @include media-breakpoint-up(md) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 7;
+  }
+}
+
+.item--5 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 9;
+
+  @include media-breakpoint-up(md) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 9;
+  }
+}
+
+.item--6 {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 9;
+  grid-row-end: 13;
+
+  @include media-breakpoint-up(md) {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 5;
+    grid-row-end: 9;
+  }
+}
+
+.item--7 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 13;
+  grid-row-end: 15;
+
+  @include media-breakpoint-up(md) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 11;
+  }
+}
+
+.item--8 {
+
+  grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 23;
+  grid-row-end: 27;
+
+
+  @include media-breakpoint-up(md) {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 9;
+    grid-row-end: 11;
+  }
+}
+
+.item--9 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 15;
+  grid-row-end: 19;
+
+  @include media-breakpoint-up(md) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 11;
+    grid-row-end: 15;
+  }
+}
+
+.item--10 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 17;
+  grid-row-end: 19;
+
+  @include media-breakpoint-up(md) {
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 11;
+    grid-row-end: 13;
+  }
+}
+
+.item--11 {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 19;
+  grid-row-end: 23;
+
+  @include media-breakpoint-up(md) {
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 13;
+    grid-row-end: 15;
+  }
+}
+
+
+.item--12 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 13;
+  grid-row-end: 17;
+
+  img {
+    object-position: 60% 50%;
+  }
+
+  @include media-breakpoint-up(md) {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 11;
+    grid-row-end: 15;
+
+    img {
+      object-position: unset;
+    }
+  }
 }
